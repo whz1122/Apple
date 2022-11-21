@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Mac</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="bootstrap5.0.1/bootstrap5/bootstrap.min.css" />
+		<script src="bootstrap5.0.1/bootstrap5/bootstrap.bundle.min.js"></script>
+		<style>
+			nav li {
+				width: 15rem;
+				text-align: center;
+			}
+
+			.col-lg-12 h1 {
+				color: white;
+			}
+
+			.col-lg-12 h2 {
+				color: white;
+			}
+
+			.col-lg-12 h3 {
+				color: white;
+			}
+
+			.col-lg-12 a {
+				color: dodgerblue;
+				font-size: 1rem;
+				font-weight: 700;
+				text-decoration: none;
+			}
+
+			.button {
+				background-color: dodgerblue;
+				color: white;
+				border: none;
+				border-radius: 4rem;
+				width: 8rem;
+				height: 3rem;
+				font-size: 1.5rem;
+				margin-bottom: 3rem;
+			}
+			input[type = "checkbox"] {
+			  -webkit-appearance: none;
+			  display: none;
+			  visibility: hidden;
+			}
+			
+			.bar {
+			  position: relative;
+			  cursor: pointer;
+			  width: 50px;
+			  height: 40px;
+			}
+			
+			.bar span {
+			  position: absolute;
+			  width: 30px;
+			  height: 3.0px;
+			  background: #f1faee;
+			  border-radius: 100px;
+			  display: inline-block;
+			  transition: 0.3s ease;
+			  left: 0;
+			}
+			
+			.bar span.top {
+			  top: 2px;
+			}
+			
+			.bar span.middle {
+			  top: 15px;
+			}
+			
+			.bar span.bottom {
+			  bottom: 7px;
+			}
+			
+			input[type]:checked ~ span.top {
+			  transform: rotate(45deg);
+			  transform-origin: top left;
+			  width: 35px;
+			  top: 6px;
+			  left: 3px;
+			}
+			
+			input[type]:checked ~ span.bottom {
+			  transform: rotate(-45deg);
+			  transform-origin: top left;
+			  width: 35px;
+			  bottom: 4px;
+			  box-shadow: 0 0 10px #495057;
+			}
+			
+			input[type]:checked ~ span.middle {
+			  transform: translateX(-20px);
+			  opacity: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+			<!-- Brand -->
+			<a class="navbar-brand" href="#"><img src="img/applelgo.png"
+					style="width: 3rem;margin-left: 2rem;margin-top: -0.5rem;" /></a>
+
+			<!-- Toggler/collapsibe Button -->
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar"
+						style="width: 3.5rem;margin-right: 1.5rem;">
+						<span><label for="check" class="bar">
+			    <input id="check" type="checkbox">
+			
+			    <span class="top"></span>
+			    <span class="middle"></span>
+			    <span class="bottom"></span>
+			</label></span>
+					</button>
+
+			<!-- Navbar links -->
+			<div class="collapse navbar-collapse" id="collapsibleNavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="index1.html">首页</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Mac</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="ipads.html">iPad</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="watch.html">Watch</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="airpods.html">Air Pods</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<div class="container-fluid">
+			<div class="row" style="background-color:black;text-align: center;padding-top: 3rem;">
+				<div class="col-lg-12">
+					<h1>13 英寸 MacBook Pro</h1>
+					<h2>超机动，硬实力</h2>
+					<h3>PRM 9999起</h3>
+					<button class="button">购买</button>
+					<a href="#">进一步了解 ></a>
+				</div>
+			</div>
+			<div class="row" style="background-color: black;margin-top: -1rem;">
+				<div class="col-lg-12 ">
+					<img src="img/mac.jpg" class="img-fluid" style="width: 100%;" />
+				</div>
+			</div>
+
+			<div class="row" style="height:auto;background-color: black;">
+				<div class="col-lg-10 offset-lg-1 d-none d-md-block ">
+					<div
+						style="background: url(img/maclarge.jpg) no-repeat;background-size: 100% 100%;width: 100%;height: 100%;text-align: center;padding-top: 15%;padding-bottom: 15%;color: white;">
+
+						<h2 style="font-weight: 500;">敬 Mac 背后的你</h2>
+						<h1 style="font-weight: 600;font-size: 4rem;">原力贯耳</h1>
+						<h3 style="font-weight: 400;">看 Skywalker Sound 的大师们如何借 Mac 之力，突破用声音讲故事的极限。</h3>
+					</div>
+				</div>
+				<div class="col-lg-12 d-md-none " style="background-color: black;">
+					<div
+						style="background: url(img/macsmall.jpg) no-repeat;background-size: 100% 100%;width: 100%;height: 100%;text-align: center;padding-top: 40%;padding-bottom: 40%;">
+
+						<h2 style="font-weight: 500;">敬 Mac 背后的你</h2>
+						<h1 style="font-weight: 600;font-size: 3.2rem;">原力贯耳</h1>
+						<h3 style="font-weight: 400;">看 Skywalker Sound 的大师们如何借 Mac 之力，突破用声音讲故事的极限。</h3>
+					</div>
+				</div>
+			</div>
+			<div class="row" style="height:auto;">
+				<div class="col-lg-10 offset-lg-1 d-none d-md-block ">
+					<div
+						style="background: url(img/lareg1.jpg) no-repeat;background-size: 100% 100%;width: 100%;height: 100%;text-align: center;padding-top: 17%;padding-bottom: 17%;color: white;">
+
+
+						<h1 style="font-weight: 600;font-size: 4rem;">Apple at Work</h1>
+						<h3 style="font-weight: 400;">以强大装备，助你业务更上一层楼。
+							了解 Apple at Work
+							看看商务选 Mac 的理由</h3>
+					</div>
+				</div>
+				<div class="col-lg-12 d-md-none mt-2" >
+					<div
+						style="background: url(img/samll1.jpg) no-repeat;background-size: 100% 100%;width: 100%;height: 100%;text-align: center;padding-top: 27%;padding-bottom: 5%;">
+
+
+						<h1 style="font-weight: 600;font-size: 3.2rem;">Apple at Work</h1>
+						<h3 style="font-weight: 400;">以强大装备，助你业务更上一层楼。
+							了解 Apple at Work
+							看看商务选 Mac 的理由</h3>
+					</div>
+				</div>
+			</div>
+			<div class="row" style="height:auto;">
+				<div class="col-lg-10 offset-lg-1 d-none d-md-block">
+					<div
+						style="background: url(img/lareg.jpg) no-repeat;background-size: 100% 100%;width: 100%;height: 100%;text-align: center;padding-top: 17%;padding-bottom: 17%;color: white;">
+			
+			
+						<h1 style="font-weight: 600;font-size: 4rem;">Apple at Work</h1>
+						<h3 style="font-weight: 400;">以强大装备，助你业务更上一层楼。
+							了解 Apple at Work
+							看看商务选 Mac 的理由</h3>
+					</div>
+				</div>
+				<div class="col-lg-12 d-md-none mt-2" >
+					<div
+						style="background: url(img/samll2.jpg) no-repeat;background-size: 100% 100%;width: 100%;height: 100%;text-align: center;padding-top: 27%;padding-bottom: 5%;">
+			
+			
+						<h1 style="font-weight: 600;font-size: 3.2rem;">Apple at Work</h1>
+						<h3 style="font-weight: 400;">以强大装备，助你业务更上一层楼。
+							了解 Apple at Work
+							看看商务选 Mac 的理由</h3>
+					</div>
+				</div>
+			</div>
+			<div class="row" >
+				<div class="col-lg-4 text-center">
+					<img src="img/mac3.png" class="img-fluid" style="width: 10%;"/>
+					<div style="width: 50%;" class="m-auto " >
+					<h4>送货上门或到店取货</h4>
+					<p class="text-black-50 ">部分订单可付费选择三小时快送+，或亲自到 Apple Store 零售店提取现货。所有订单均可享免费送货。</p>
+				    </div>
+				</div>
+				<div class="col-lg-4 text-center">
+					<img src="img/mac2.png" class="img-fluid" style="width: 10%;"/>
+					<div style="width: 50%;" class="m-auto " >
+					<h4>分期付款</h4>
+					<p class="text-black-50 ">符合条件的用户可选择灵活的分期付款方式。</p>
+					 </div>
+				</div>
+				<div class="col-lg-4 text-center">
+					<img src="img/mac1.png" class="img-fluid" style="width: 10%;"/>
+					<div style="width: 50%;" class="m-auto " >
+					<h4>个性化镌刻服务</h4>
+					<p class="text-black-50 ">无论是你的名字，还是你想说的话，都能免费帮你刻在 iPad 上。Apple 独家福利。</p>
+				     </div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>

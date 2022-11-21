@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<title>主页</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="bootstrap5.0.1/bootstrap5/bootstrap.min.css" />
+	<script src="bootstrap5.0.1/bootstrap5/bootstrap.bundle.min.js"></script>
+
+	<style>
+		body {
+
+			font-family: 'Roboto', sans-serif;
+			display: flex;
+			flex-direction: column;
+
+			justify-content: center;
+			margin: 0;
+			overflow-x: hidden;
+			background-color: rgba(0, 0, 0, 0.08);
+		}
+
+
+		.row {
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transform: translateX(400%);
+			transition: transform 1.2s ease;
+		}
+
+		.row:nth-of-type(even) {
+			transform: translateX(-400%);
+		}
+
+		.row.show {
+			transform: translateX(0);
+		}
+
+
+
+
+		nav li {
+			width: 17rem;
+			text-align: center;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		.con1 {
+			display: flex;
+			width: 95vw;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 60vh;
+			overflow: hidden;
+			margin: 0;
+
+		}
+
+		.panel {
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			height: 50vh;
+			border-radius: 50px;
+			color: #fff;
+			box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.3);
+			cursor: pointer;
+			flex: 0.5;
+			margin: 10px;
+			position: relative;
+			-webkit-transition: all 700ms ease-in;
+
+		}
+
+		.panel h3 {
+			font-size: 3.5rem;
+			font-weight: 800;
+			color: black;
+			position: absolute;
+			bottom: 20px;
+			left: 20px;
+			margin: 0;
+			opacity: 0;
+		}
+
+		.panel.active {
+			flex: 5;
+		}
+
+		.panel.active h3 {
+			opacity: 1;
+			transition: opacity 0.3s ease-in 0.4s;
+		}
+
+		@media (max-width: 480px) {
+			/* .con1 {
+			    width: 100vw;
+			  } */
+
+			.panel:nth-of-type(4),
+			.panel:nth-of-type(5) {
+				display: none;
+			}
+		}
+
+		button {
+			background-color: dodgerblue;
+			color: white;
+			border-radius: 30px;
+			height: 3rem;
+			width: 6rem;
+			border: none;
+		}
+
+		#biansewenzi {
+			font-size: 4rem;
+			font-weight: 800;
+			background: linear-gradient(135deg, rgba(85, 170, 255, 0.6) 15%, rgba(170, 170, 255, 0.8) 40%, rgba(255, 0, 0, 1.0) 70%);
+			-webkit-background-clip: text;
+			color: transparent;
+			x
+		}
+
+		#biansewenzi1 {
+			font-size: 3.0rem;
+			font-weight:800;
+			text-align： center；
+			background linear-gradient(135deg, rgba(170, 0, 127, 0.6) 0%, rgba(170, 170, 0, 0.8) 35%, rgba(0, 255, 127, 0.8) 60%, rgba(0, 0, 0, 1.0) 70%);
+			-webkit-background-clip: text;
+			color： transparent;
+			x
+		}
+
+		.watch h1 {
+			color: black;
+			font-weight: 600;
+			font-size: 3rem;
+		}
+
+		.watch sapn {
+			color: black;
+			font-weight: 500;
+			font-size: 2.5rem;
+		}
+
+		#jiaoyu h2 {
+			font-weight: 600;
+		}
+
+		#ipdas h2 {
+			font-weight: 600;
+			margin-top: 20%;
+			font-size: 3rem;
+		}
+
+		#daxianshi1 {
+			background-color: white;
+
+		}
+
+		#daxianshi {
+			background-color: white;
+
+		}
+
+		#daxianshi h1 {
+			font-weight: 550;
+		}
+
+		#daxianshi h2 {
+			font-weight: 300;
+			font-size: 1.2rem;
+		}
+
+		#daxianshi1 h1 {
+			font-weight: 550;
+		}
+
+		#daxianshi1 h2 {
+			font-weight: 300;
+			font-size: 1.2rem;
+		}
+
+		#daxianshi2 h1 {
+			font-weight: 550;
+			padding-top: 20%;
+		}
+
+		#daxianshi2 h3 {
+			font-weight: 300;
+			font-size: 1.2rem;
+		}
+
+		#yingcang {
+			background-color: white;
+			text-align: center;
+			margin-top: -0.5rem;
+		}
+
+		#yingcang h1 {
+			font-weight: 550;
+			padding-top: 20%;
+		}
+
+		#yingcang h3 {
+			font-weight: 300;
+			font-size: 1.2rem;
+		}
+
+		.tong1 {
+			position: absolute;
+			top: 16%;
+			width: 96%;
+			text-align: center;
+		}
+
+		.tong2 {
+			font-size: 3rem;
+			color: white;
+		}
+
+		.tong3 {
+			color: dodgerblue;
+			font-size: 1.2rem;
+			font-weight: 700;
+		}
+
+		.tong4 {
+			color: white;
+			padding-top: 20%;
+			padding-bottom: 20%;
+		}
+
+		#ipdas {
+			color: white;
+			padding-top: 20%;
+			padding-bottom: 24%;
+		}
+
+		.tong5 {
+			color: dodgerblue;
+			font-weight: 600;
+
+		}
+
+		#applegoumai {
+			background: url(img/xia3.jpg) no-repeat;
+			background-size: 100% 100%;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+		}
+
+		#xia1 {
+			width: 40%;
+			height: 40%;
+			margin-left: 25%;
+		}
+
+		.counter-container {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			text-align: center;
+			margin: 30px 50px;
+		}
+
+		.counter {
+			font-size: 60px;
+			margin-top: 10px;
+		}
+
+		@media (max-width: 580px) {
+			#row11 {
+				flex-direction: column;
+			}
+		}
+		input[type = "checkbox"] {
+		  -webkit-appearance: none;
+		  display: none;
+		  visibility: hidden;
+		}
+		
+		.bar {
+		  position: relative;
+		  cursor: pointer;
+		  width: 50px;
+		  height: 40px;
+		}
+		
+		.bar span {
+		  position: absolute;
+		  width: 30px;
+		  height: 3.0px;
+		  background: #f1faee;
+		  border-radius: 100px;
+		  display: inline-block;
+		  transition: 0.3s ease;
+		  left: 0;
+		}
+		
+		.bar span.top {
+		  top: 2px;
+		}
+		
+		.bar span.middle {
+		  top: 15px;
+		}
+		
+		.bar span.bottom {
+		  bottom: 7px;
+		}
+		
+		input[type]:checked ~ span.top {
+		  transform: rotate(45deg);
+		  transform-origin: top left;
+		  width: 35px;
+		  top: 6px;
+		  left: 3px;
+		}
+		
+		input[type]:checked ~ span.bottom {
+		  transform: rotate(-45deg);
+		  transform-origin: top left;
+		  width: 35px;
+		  bottom: 4px;
+		  box-shadow: 0 0 10px #495057;
+		}
+		
+		input[type]:checked ~ span.middle {
+		  transform: translateX(-20px);
+		  opacity: 0;
+		}
+	</style>
+	
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+		<!-- Brand -->
+		<a class="navbar-brand" href="#"><img src="img/applelgo.png"
+				style="width: 3rem;margin-left: 2rem;margin-top: -0.5rem;" /></a>
+
+		<!-- Toggler/collapsibe Button -->
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar"
+			style="width: 3.5rem;margin-right: 1.5rem;">
+			<span><label for="check" class="bar">
+    <input id="check" type="checkbox">
+
+    <span class="top"></span>
+    <span class="middle"></span>
+    <span class="bottom"></span>
+</label></span>
+		</button>
+
+		<!-- Navbar links -->
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="index1.html">首页</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="mac.html">Mac</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="ipads.html">iPad</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="watch.html">Watch</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="airpods.html">Air Pods</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+
+	<div class="container-fluid">
+		<div class="row" style="padding-top: 3rem;background-color: white;">
+			
+			<div class="col-lg-12" style="text-align: center;">
+				<h5 class="text-muted">新款</h5>
+				<h2>iPhone14</h2>
+				<h1 id="biansewenzi">玩就玩超大</h1>
+				<button id="button" data-bs-toggle="popover"  data-bs-content="买不了">购买</button>
+				
+				<h4><a href="#">进一步了解 ></a></h4>
+
+			</div>
+			<script>
+			var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+			var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+			  return new bootstrap.Popover(popoverTriggerEl)
+			})
+			</script>
+			<div class="col-lg-12">
+
+				<img src="img/topback.jpg" class="mx-auto d-block img-fluid" style="width: 80%;height: 80%;" />
+
+			</div>
+		</div>
+
+		<div class="row" id="row11" style="margin: 4rem 0px;">
+			<div class="col-lg-4">
+				<div class="counter-container">
+
+					<div class="counter" data-target="10000"></div>
+					<span>粉丝超过（万）</span>
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div class="counter-container">
+
+					<div class="counter" data-target="5000"></div>
+					<span>微博粉丝（万）</span>
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div class="counter-container">
+
+					<div class="counter" data-target="7500"></div>
+					<span>全球果粉（万）</span>
+				</div>
+			</div>
+		</div>
+
+
+
+		<script>
+			const counters = document.querySelectorAll('.counter')
+
+			counters.forEach(counter => {
+				counter.innerText = '0'
+
+				const updateCounter = () => {
+					const target = +counter.getAttribute('data-target')
+					const c = +counter.innerText
+
+					const increment = target / 1200
+
+					if (c < target) {
+						counter.innerText = `${Math.ceil(c + increment)}`
+						setTimeout(updateCounter, 1)
+					} else {
+						counter.innerText = target
+					}
+				}
+
+				updateCounter()
+			})
+		</script>
+
+
+
+
+
+
+
+		<div class="row" style="margin-top: -0rem;">
+			<h1 id="biansewenzi1">“强力出圈”</h1>
+			<div class="col-lg-6 col-md-12" style="position: relative;margin-top: 2rem;">
+				<img src="img/top3.jpg" style="width: 100%;" class="rounded-circle" />
+				<div class="tong1">
+					<span class="tong2">AirPods Pro</span>
+					<br />
+					<span style="color: white;">重塑真声</span>
+					<br />
+					<a href="#" class="tong3">进一步了解 >&nbsp; </a> <a href="#" class="tong3">购买 ></a>
+				</div>
+			</div>
+			<br />
+			<div class="col-lg-6 col-md-12" style="position: relative;margin-top: 1.5rem;">
+				<img class="rounded-circle" src="img/top4.jpg" style="width: 100%;" />
+				<div class="tong1">
+					<span class="tong2">AirPods Pro</span>
+					<br />
+					<span style="color: white;">重塑真声</span>
+					<br />
+					<a href="#" class="tong3">进一步了解 ></a>&nbsp;<a href="#" class="tong3">购买 ></a>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-12" style="margin-top: 8rem;">
+			<h1 style="text-align: center;font-weight: 600;">这个商店， 产品都称心，
+				体验更如意。</h1>
+		</div>
+		<div class="row">
+			<div class="con1 col-lg-12" style="margin-top: 2rem;">
+
+				<br />
+				<div class="panel" style="background-image: url(img/iphone14.jpg)">
+					<h3>iPhone 14</h3>
+				</div>
+				<div class="panel" style="background-image: url(img/iphone13.jpg)">
+					<h3>iPhone 13</h3>
+				</div>
+				<div class="panel  active" style="background-image: url(img/iphonese.jpg)">
+					<h3>iPhone SE</h3>
+				</div>
+				<div class="panel" style="background-image: url(img/watch.png)">
+					<h3>Apple Watch Ultra</h3>
+				</div>
+				<div class="panel" style="background-image: url(img/airpods.jpg)">
+					<h3>AirPods Pro</h3>
+				</div>
+
+			</div>
+		</div>
+		<script>
+			const panels = document.querySelectorAll('.panel')
+
+			panels.forEach(panel => {
+				panel.addEventListener('mousemove', () => {
+					removeActiveClasses()
+					panel.classList.add('active')
+				})
+
+			})
+
+			function removeActiveClasses() {
+				panels.forEach(panel => {
+					panel.classList.remove('active')
+				})
+			}
+		</script>
+		<div class="row">
+			<div class="col-lg-6 col-md-12">
+
+				<div style="background: url(img/bottom.jpg) no-repeat;background-size:100% 100%;  width: 100%;height:42%;margin-top: 0.5rem;"
+					class="img-fluid">
+					<div class="tong4" id="jiaoyu">
+						<h2 style="text-align: center;">教育赋予每个人前行
+							<br />
+							的力量
+							<br />
+							<span style="font-size: 1rem;">
+								我们携手合作伙伴<br />
+								在逾100个国家和地区提供学习机会
+								<br />
+								<a href="#" class="tong5">进一步了解 ></a>
+							</span>
+						</h2>
+					</div>
+				</div>
+				<div style=" background: url(img/wahtchs1.jpg) no-repeat;background-size:100% 100%;  width: 100%;height:100%;margin-top: 1.5rem;"
+					class="img-fluid">
+					<div class="tong4" class="watch">
+						<h1 style="text-align: center;">WATCH SE
+							<br />
+							<span style="font-size: 1rem;">
+
+								超值超有料
+								<br />
+								<a href="#" style="color:rebeccapurple;font-weight: 600;">进一步了解 ></a>
+							</span>
+						</h1>
+					</div>
+
+				</div>
+			</div><br />
+			<div class="col-lg-6 col-md-12" style="display: inline-block;">
+				<div
+					style=" background: url(img/IPADS.jpg) no-repeat;background-size:100% 100%;  width: 100%;height:95%;margin-top: 0rem;">
+					<div id="ipdas">
+						<h2 style="text-align: center;">iPad Air
+							<br />
+							轻，靓,重量级
+							<br />
+							<span style="font-size: 1rem;">
+								<a href="#" class="tong5">进一步了解 ></a>
+							</span>
+						</h2>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-5 col-md-12 offset-lg-1 mt-2 " id="daxianshi1">
+				<div style="text-align: center;">
+					<h1>用智能手机来换购，享受折抵优惠。</h1>
+					<h2>通过 Apple Trade In 换购计划，你可以用符合条件的智能手机来换购新 iPhone，享受折抵优惠5。这样一来，你受益，地球也受益。</h2>
+					<a href="#">进一步了解 ></a>
+				</div>
+				<div style="">
+					<img src="img/xia1.jpg" id="xia1" class="img-fluid" style="margin-top: 1%;" />
+				</div>
+			</div>
+			<div class="col-lg-5 col-md-12 mx-lg-1 mt-2" id="daxianshi" class="daxianshi">
+				<div style="text-align: center;background-color: white;">
+					<h1>超值升级，年年用新机。</h1>
+					<h2>从 Apple 入手新 iPhone 并加购 AppleCare+ 服务计划，购机后 3 至 13 个月内即可升级下一部 iPhone，符合条件还可享原设备零售价格 50% 的折抵优惠*。
+					</h2>
+					<a href="#">进一步了解 ></a>
+				</div>
+				<img src="img/xia2.png" class="img-fluid"
+					style="width: 100%;height: 100%;margin-bottom: 5%;margin-top: 5%;" />
+
+				<div style="background-color: white;" class="text-center">
+					<h4>已加入 iPhone 年年焕新计划？</h4>
+					<a href="#">查询升级换购资格</a>
+				</div>
+			</div>
+
+			<div class="col-lg-10 offset-lg-1 col-md-12   d-none d-md-block mt-2" style="height:60vh;" id="daxianshi2">
+				<div id="applegoumai">
+					<h1>在 Apple 购买，好处多多。</h1>
+					<h3>你可以选择适合自己的付款方式，通过 Apple Trade In 换购计划享受折抵优惠，快速搞定各项设置，还可以和 Specialist 专家沟通交流。</h3>
+					<a href="#">进一步了解 ></a>
+				</div>
+			</div>
+			<div class="col-md-12 col-lg-12 d-md-none mt-2">
+				<img src="img/xia3-1.jpg" class="img-fluid" />
+				<div id="yingcang">
+					<h1>在 Apple 购买，好处多多。</h1>
+					<h3>你可以选择适合自己的付款方式，通过 Apple Trade In 换购计划享受折抵优惠，快速搞定各项设置，还可以和 Specialist 专家沟通交流。</h3>
+					<a href="#">进一步了解 ></a>
+				</div>
+				<img src="img/xia3-2.jpg" class="img-fluid" />
+
+			</div>
+		</div>
+		<script>
+			const boxes = document.querySelectorAll('.row')
+
+			window.addEventListener('scroll', checkBoxes)
+
+			checkBoxes()
+
+			function checkBoxes() {
+				const triggerBottom = window.innerHeight / 5 * 4
+
+				boxes.forEach(row => {
+					const boxTop = row.getBoundingClientRect().top
+
+					if (boxTop < triggerBottom) {
+						row.classList.add('show')
+					} else {
+						row.classList.remove('show')
+					}
+				})
+			}
+		</script>
+
+
+
+	</div>
+
+</body>
+</html>
